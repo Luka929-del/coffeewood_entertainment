@@ -7,7 +7,11 @@ from rest_framework.exceptions import ValidationError
 from .moderation import contains_banned_words
 from users.models import User
 from typing import cast
+from django.http import JsonResponse
 
+def movie_list_view(request):
+    movies = Movie.objects.all().values("id", "title", "release_year")
+    return JsonResponse(list(movies), safe=False)
 
 
 class MovieViewSet(ModelViewSet):
