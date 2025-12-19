@@ -8,7 +8,7 @@ router.register("movies", MovieViewSet)
 urlpatterns = router.urls + [
     path('favorites/', FavoriteListCreateView.as_view()),
     path('favorites/<int:pk>/', FavoriteDetailView.as_view()),
-    path('movies/<int:movie_id>/comments/', CommentListCreateView.as_view(), name='movie-comments'),
-    path('comments/<int:pk>/delete/', CommentDeleteView.as_view(), name='comment-delete'),
+    path('movies/<int:movie_id>/comments/', CommentListCreateView.as_view()),
+    path('comments/<int:pk>/delete/', CommentDeleteView.as_view()),
 ]
 
