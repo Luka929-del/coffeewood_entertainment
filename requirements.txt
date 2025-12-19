@@ -4,3 +4,7 @@ djangorestframework==3.16.1
 djangorestframework_simplejwt==5.5.1
 PyJWT==2.10.1
 sqlparse==0.5.4
+dj-database-url>=1.0.0
+psycopg[binary]>=3.1.0
+pytest>=7.0
+pytest-django>=4.0
